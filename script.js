@@ -3,8 +3,8 @@ const secondSide = document.querySelector("#input2");
 const thirdSide = document.querySelector("#input3");
 const checkButton = document.querySelector("#button-addon2");
 
-
-checkButton.addEventListener('click', ()=>{
+checkButton.addEventListener('click',checkTriangle);
+function checkTriangle(){
     side1 = +(firstSide.value);
     // console.log(typeof side1);
     side2 = +(secondSide.value);
@@ -63,4 +63,11 @@ checkButton.addEventListener('click', ()=>{
         result2.innerHTML = 'Invalid Triangle. All sides have to be of length > 0';
     };
 
-});
+};
+
+window.addEventListener("keyup", function(event) {
+    if (event.code == "Enter" || event.code == "NumpadEnter") {
+        event.preventDefault;
+        checkTriangle(event.code);
+    }
+  });
