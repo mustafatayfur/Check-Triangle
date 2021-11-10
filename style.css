@@ -14,13 +14,16 @@ h1{
     color: rgb(70, 84, 99);
 }
 #header p{
-    margin: 40px 0;
+    margin: 30px 0;
 }
 span{
     width: 120px;
 }
 #result{
-    margin: 50px;
+    margin: 20px;
+}
+#result-img{
+    width: 120px;
 }
 @media screen and (max-width:900px) {
     #container{
