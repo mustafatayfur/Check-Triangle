@@ -10,13 +10,10 @@ checkButton.addEventListener('click', ()=>{
     side2 = +(secondSide.value);
     side3 = +(thirdSide.value);
     const footerDiv = document.getElementById("footer");
-    const oldElement1 = footerDiv.children[0];
-    const oldElement2 = footerDiv.children[1];
-    footerDiv.removeChild(oldElement1);
-    // footerDiv.removeChild(oldElement2);
-
-
+    footerDiv.innerHTML = '';
+       
     if(side1 >= 1 && side2 >= 1 && side3 >= 1){
+        
         if((side1+side2 > side3)
             &&(side1+side3>side2)
             &&(side2+side3>side1)){
@@ -37,7 +34,7 @@ checkButton.addEventListener('click', ()=>{
                     img_result.src = "https://i.ya-webdesign.com/images/equilateral-triangle-png-1.png";
                 
                 }else if(side1==side2 || side1==side3 || side2==side3){
-                    
+
                     result1.innerHTML = 'Your triangle is Isosceles';
                     img_result.src = "https://www.mathword.co/wp-content/uploads/2018/06/isosceles-triangle.png";
 
@@ -49,8 +46,8 @@ checkButton.addEventListener('click', ()=>{
                 }
 
         }else{
+
             const pEl2 = document.createElement("p");
-            
             footerDiv.appendChild(pEl2);
             pEl2.setAttribute('id','result2');
             const result2 = document.querySelector("#result2");
@@ -58,8 +55,8 @@ checkButton.addEventListener('click', ()=>{
 
         };
     }else{
+
         const pEl2 = document.createElement("p");
-        
         footerDiv.appendChild(pEl2);
         pEl2.setAttribute('id','result2');
         const result2 = document.querySelector("#result2");
