@@ -3,6 +3,8 @@ const secondSide = document.querySelector("#input2");
 const thirdSide = document.querySelector("#input3");
 const checkButton = document.querySelector("#button-addon2");
 const result = document.querySelector("#result");
+const img_result = document.querySelector("#footer");
+
 
 
 checkButton.addEventListener('click', ()=>{
@@ -26,15 +28,16 @@ checkButton.addEventListener('click', ()=>{
 
                 }else{
                     result.innerHTML = 'Scalene';
+                    img_result.innerHTML = "<img src=\"https://www.seekpng.com/png/detail/104-1047876_scalene-isosceles-triangle-png.png\"></img>";
+                   
                 }
 
         }else{
-            result.innerHTML = 'Invalid Triangle2.';
+            result.innerHTML = 'Invalid Triangle.';
 
         };
     }else{
-        result.innerHTML = 'Invalid Triangle3.';
+        result.innerHTML = 'Invalid Triangle.';
     };
 
-    window.onload;
 });
