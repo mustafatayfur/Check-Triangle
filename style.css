@@ -8,3 +8,9 @@
     width: 40%;
     text-align: center;
 }
+span{
+    width: 120px;
+}
+#result{
+    margin: 50px;
+}
